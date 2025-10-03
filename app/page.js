@@ -2,102 +2,198 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      {/* Header */}
+      <header className="sticky top-0 z-50 bg-[rgba(51,51,51,0.5)] transition duration-300 backdrop-blur-sm">
+        <nav className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+          <h1 className="text-[22px] font-bold bg-gradient-to-b from-blue-600 to-indigo-700 text-transparent bg-clip-text drop-shadow">
+            Rytshark Port
+          </h1>
+          <ul className="flex gap-6">
+            {["Home", "About", "Projects", "Contact"].map((item) => (
+              <li key={item}>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="text-white text-lg hover:text-red-600 transition"
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+      {/* Home Section */}
+      <section
+        id="home"
+        className="h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg.jpg')]"
+      >
+        <div className="bg-black/80 bg-opacity-70 p-12 rounded-lg text-center max-w-xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4">
+            Hey, <strong>Abhishal KS</strong> here!
+          </h1>
+          <p className="mb-2">Co-Founder of TipDoor.</p>
+          <p className="mb-4">
+            Building TipDoor's Tech as a passionate web developer.
+          </p>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#about"
+            className="inline-block mt-4 px-6 py-2 bg-red-600 hover:bg-red-800 text-white rounded transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            Learn More
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      </section>
+
+      {/* About Section */}
+      <section
+        id="about"
+        className="min-h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg2.jpg')]"
+      >
+        <div className="flex flex-col items-center text-center max-w-5xl px-4">
+          <h2 className="bg-black/80 bg-opacity-70 p-8 rounded-lg mb-8 text-3xl font-bold w-full">
+            About Me
+          </h2>
+          <p className="mb-8 max-w-2xl">
+            Hey, I'm Abhishal Kumar Sharma, a web developer based in Delhi. Full-Stack developer specializing in front-end development, creating dynamic, user-friendly web apps.
+            <br />
+            The following skill cards denote the technologies I have experience in.
+          </p>
+          <div className="flex flex-wrap gap-4 w-full justify-center">
+            {[
+              { src: 'HTML5.webp', name: 'HTML' },
+              { src: 'CSS3.png', name: 'CSS' },
+              { src: 'JavaScript.png', name: 'JavaScript' },
+              { src: 'ExpressJS.png', name: 'Express' },
+              { src: 'MongoDB.png', name: 'MongoDB' },
+              { src: 'Tailwind CSS.png', name: 'Tailwind CSS' },
+              { src: 'React.webp', name: 'React' },
+            ].map(({ src, name }) => (
+              <div
+                key={name}
+                className="bg-gray-100 text-black p-5 rounded-lg shadow-md flex flex-col items-center justify-center h-32 w-28"
+              >
+                <img src={src} alt={name} className="w-14 h-14 object-contain" />
+                <h3 className="mt-3 font-semibold">{name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section
+        id="projects"
+        className="h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg3.jpg')]"
+      >
+        <div className="text-center max-w-5xl px-4">
+          <h2 className="bg-black/80 bg-opacity-70 p-8 rounded-lg text-3xl font-bold mb-8">
+            My Projects
+          </h2>
+          <div className="flex flex-wrap justify-center gap-6">
+            {[
+              {
+                src: 'project1.jpg',
+                title: 'Project 1',
+                desc: 'Aesthetics display website',
+                linkTo: 'https://aesthetics-meadows.vercel.app/'
+              },
+              {
+                src: 'project2.jpg',
+                title: 'Project 2',
+                desc: 'Another project description.',
+                linkTo: ''
+              },
+              {
+                src: 'project3.jpg',
+                title: 'Project 3',
+                desc: 'Short description of my third project.',
+                linkTo: ''
+              },
+            ].map(({ src, title, desc, linkTo }) => (
+              <div
+                key={title}
+                className="bg-gray-100 text-black p-6 rounded-lg w-[300px] text-left shadow-md"
+              >
+                <img
+                  src={`/${src}`}
+                  alt={title}
+                  className="w-full rounded-lg mb-3"
+                />
+                <h3 className="text-lg font-bold">{title}</h3>
+                <p className="text-sm">{desc}</p>
+                <a
+                  target="_blank"
+                  href={linkTo}
+                  className="text-red-600 mt-2 inline-block hover:underline"
+                >
+                  View Project
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section
+        id="contact"
+        className="h-screen bg-cover bg-center bg-fixed flex justify-center items-center bg-[url('/hero-bg4.jpg')]"
+      >
+        <div className="text-white text-center w-full px-4">
+          <h2 className="bg-black/80 bg-opacity-70 p-8 rounded-lg text-3xl font-bold mb-6 ">
+            Contact Me
+          </h2>
+          <form
+            action="#"
+            method="POST"
+            className="max-w-md mx-auto bg-black/80 bg-opacity-60 p-6 rounded-lg"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              className="w-full p-3 mb-4 border border-gray-300 rounded text-white"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              className="w-full p-3 mb-4 border border-gray-300 rounded text-white"
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+              className="w-full p-3 mb-4 border border-gray-300 rounded text-white"
+              rows={4}
+            ></textarea>
+            <button
+              type="submit"
+              className="w-full px-6 py-2 bg-red-600 hover:bg-red-800 text-white rounded transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white text-center py-6">
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#home"
+          className="block mb-6 hover:bg-gray-700 py-2 transition"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          Back to top
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className="h-px bg-gray-500 w-[90vw] mx-auto mb-4"></div>
+        <p className="text-sm">
+          &copy; 2025 Abhishal Kumar Sharma. All rights reserved.
+        </p>
       </footer>
-    </div>
+    </>
   );
 }
