@@ -74,7 +74,7 @@ export default function Home() {
                 key={name}
                 className="bg-gray-100 text-black p-5 rounded-lg shadow-md flex flex-col items-center justify-center h-32 w-28"
               >
-                <img src={src} alt={name} className="w-14 h-14 object-contain" />
+                <Image src={`/${src}`} alt={name} height={56} width={56} className="w-14 h-14 object-contain" />
                 <h3 className="mt-3 font-semibold">{name}</h3>
               </div>
             ))}
@@ -116,9 +116,10 @@ export default function Home() {
                 key={title}
                 className="bg-gray-100 text-black p-6 rounded-lg w-[300px] text-left shadow-md"
               >
-                <img
+                <Image
                   src={`/${src}`}
                   alt={title}
+                  fill
                   className="w-full rounded-lg mb-3"
                 />
                 <h3 className="text-lg font-bold">{title}</h3>
@@ -139,47 +140,105 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="h-screen bg-cover bg-center bg-fixed flex justify-center items-center bg-[url('/hero-bg4.jpg')]"
+        className="min-h-screen bg-[url('/hero-bg4.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center px-4 py-16"
       >
-        <div className="text-white text-center w-full px-4">
-          <h2 className="bg-black/80 bg-opacity-70 p-8 rounded-lg text-3xl font-bold mb-6 ">
-            Contact Me
-          </h2>
-          <form
-            action="#"
-            method="POST"
-            className="max-w-md mx-auto bg-black/80 bg-opacity-60 p-6 rounded-lg"
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-              className="w-full p-3 mb-4 border border-gray-300 rounded text-white"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-              className="w-full p-3 mb-4 border border-gray-300 rounded text-white"
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              required
-              className="w-full p-3 mb-4 border border-gray-300 rounded text-white"
-              rows={4}
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full px-6 py-2 bg-red-600 hover:bg-red-800 text-white rounded transition"
-            >
-              Send Message
-            </button>
-          </form>
+        <div className="w-full max-w-4xl bg-black/70 backdrop-blur-md rounded-xl p-10 shadow-lg text-white">
+          <h2 className="text-4xl font-bold text-center mb-10">Let's Connect</h2>
+          <p className="text-lg mb-8 text-center">
+            Have a project in mind, or just want to say hello? Reach out via your favorite platform!
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              {
+                label: 'Email',
+                value: 'abhishalsharma2002@gmail.com',
+                href: 'mailto:abhishalsharma2002@gmail.com',
+                icon: '📧',
+              },
+              {
+                label: 'LinkedIn',
+                value: 'linkedin.com/in/abhishal-sharma-22b606209',
+                href: 'https://www.linkedin.com/in/abhishal-sharma-22b606209',
+                icon: '🔗',
+              },
+              {
+                label: 'GitHub',
+                value: 'github.com/abhishal-ks',
+                href: 'https://github.com/abhishal-ks',
+                icon: '💻',
+              },
+              {
+                label: 'Phone',
+                value: '+7001478499',
+                href: 'tel:+7001478499',
+                icon: '📞',
+              },
+              {
+                label: 'Location',
+                value: 'Delhi, INDIA',
+                href: '#',
+                icon: '📍',
+              },
+              {
+                label: 'CV',
+                value: 'View CV',
+                href: '/Abhishal-CV.pdf',
+                icon: '📄',
+              },
+            ].map(({ label, value, href, icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 bg-white/10 hover:bg-white/20 p-5 rounded-lg transition"
+              >
+                <span className="text-3xl">{icon}</span>
+                <div>
+                  <p className="text-sm text-gray-300">{label}</p>
+                  <p className="font-semibold">{value}</p>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
+
+      {/* <section
+        id="contact"
+        className="min-h-[60vh] bg-[url('/hero-bg4.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center px-4 py-20"
+      >
+        <div className="bg-black/80 backdrop-blur-md text-center p-10 rounded-xl shadow-lg text-white max-w-2xl">
+          <h2 className="text-4xl font-bold mb-6">Let’s Work Together</h2>
+          <p className="text-lg mb-8">
+            Have a project in mind, or just want to say hello? Reach out via your favorite platform!
+          </p>
+
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a
+              href="mailto:you@example.com"
+              className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-full font-medium transition"
+            >
+              Send Email
+            </a>
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-medium transition"
+            >
+              Connect on LinkedIn
+            </a>
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              className="bg-gray-800 hover:bg-gray-900 px-6 py-3 rounded-full font-medium transition"
+            >
+              Visit GitHub
+            </a>
+          </div>
+        </div>
+      </section> */}
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white text-center py-6">
