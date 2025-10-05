@@ -158,13 +158,13 @@ export default function Home() {
               },
               {
                 label: 'LinkedIn',
-                value: 'linkedin.com/in/abhishal-sharma-22b606209',
+                value: 'Abhishal Sharma',
                 href: 'https://www.linkedin.com/in/abhishal-sharma-22b606209',
                 icon: '🔗',
               },
               {
                 label: 'GitHub',
-                value: 'github.com/abhishal-ks',
+                value: 'abhishal-ks',
                 href: 'https://github.com/abhishal-ks',
                 icon: '💻',
               },
@@ -241,7 +241,7 @@ export default function Home() {
       </section> */}
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white text-center py-6">
+      <footer className="bg-gray-900 text-white text-center pb-6">
         <a
           href="#home"
           className="block mb-6 hover:bg-gray-700 py-2 transition"
