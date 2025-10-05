@@ -35,7 +35,7 @@ export default function Home() {
           </h1>
           <p className="mb-2">Co-Founder of TipDoor.</p>
           <p className="mb-4">
-            Building TipDoor's Tech as a passionate web developer.
+            Working with Tech Startups as a passionate web developer.
           </p>
           <a
             href="#about"
@@ -56,7 +56,7 @@ export default function Home() {
             About Me
           </h2>
           <p className="mb-8 max-w-2xl">
-            Hey, I'm Abhishal Kumar Sharma, a web developer based in Delhi. Full-Stack developer specializing in front-end development, creating dynamic, user-friendly web apps.
+            Hey, I am Abhishal Kumar Sharma, a web developer based in Delhi. Full-Stack developer specializing in front-end development, creating dynamic, user-friendly web apps.
             <br />
             The following skill cards denote the technologies I have experience in.
           </p>
@@ -143,7 +143,7 @@ export default function Home() {
         className="min-h-screen bg-[url('/hero-bg4.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center px-4 py-16"
       >
         <div className="w-full max-w-4xl bg-black/70 backdrop-blur-md rounded-xl p-10 shadow-lg text-white">
-          <h2 className="text-4xl font-bold text-center mb-10">Let's Connect</h2>
+          <h2 className="text-4xl font-bold text-center mb-10">Let&apos;s Connect</h2>
           <p className="text-lg mb-8 text-center">
             Have a project in mind, or just want to say hello? Reach out via your favorite platform!
           </p>
