@@ -27,7 +27,7 @@ export default function Home() {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-[rgba(51,51,51,0.5)] transition duration-300 backdrop-blur-sm">
         <nav className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-          <h1 className="text-[22px] font-bold bg-gradient-to-b from-blue-600 to-indigo-700 text-transparent bg-clip-text drop-shadow">
+          <h1 className="text-lg md:text-2xl font-bold bg-gradient-to-b from-blue-600 to-indigo-700 text-transparent bg-clip-text drop-shadow">
             Rytshark Port
           </h1>
           <ul className="flex gap-6">
