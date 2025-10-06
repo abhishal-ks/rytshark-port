@@ -56,7 +56,7 @@ export default function Home() {
         id="home"
         className="h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg.jpg')]"
       >
-        <div className="bg-black/80 bg-opacity-70 p-12 rounded-lg text-center max-w-xl mx-auto">
+        <div className="bg-black/80 bg-opacity-70 p-3 md:p-12 rounded-lg text-center max-w-xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">
             Hey, <strong>Abhishal KS</strong> here!
           </h1>
@@ -281,7 +281,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      {/* Footer */}
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white text-center pb-6 ">
         <a
