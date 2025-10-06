@@ -80,7 +80,7 @@ export default function Home() {
         id="about"
         className="min-h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg2.jpg')]"
       >
-        <div className="flex flex-col items-center text-center max-w-5xl px-4">
+        <div className="flex flex-col items-center text-center max-w-5xl px-0.5 md:px-4">
           <h2 className="bg-black/80 bg-opacity-70 p-8 rounded-lg mb-8 text-3xl font-bold w-full">
             About Me
           </h2>
