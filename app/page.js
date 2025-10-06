@@ -56,7 +56,7 @@ export default function Home() {
         id="home"
         className="h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg.jpg')]"
       >
-        <div className="bg-black/80 bg-opacity-70 p-3 md:p-12 rounded-lg text-center md:max-w-xl mx-auto">
+        <div className="bg-black/80 bg-opacity-70 px-1 py-2.5 md:p-12 rounded-lg text-center md:max-w-xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">
             Hey👋,
             <br/>
@@ -92,7 +92,7 @@ export default function Home() {
           <h3 className="text-2xl font-semibold mb-6 underline decoration-white/40">
             My Skill Cards
           </h3>
-          <div className="flex flex-wrap gap-5 md:gap-9 w-full justify-center">
+          <div className="flex flex-wrap gap-3.5 md:gap-9 w-full justify-center">
             {[
               { src: 'HTML5.webp', name: 'HTML', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
               { src: 'CSS3.png', name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
