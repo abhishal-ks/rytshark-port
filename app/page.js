@@ -58,7 +58,9 @@ export default function Home() {
       >
         <div className="bg-black/80 bg-opacity-70 p-3 md:p-12 rounded-lg text-center md:max-w-xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">
-            Hey, <strong>Abhishal KS</strong> here!
+            Hey👋,
+            <br/>
+            <strong>Abhishal KS</strong> here!
           </h1>
           <p className="mb-2">Co-Founder of TipDoor.</p>
           <p className="mb-4">
