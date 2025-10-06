@@ -1,6 +1,27 @@
+'use client';
 import Image from "next/image";
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 } // 60% of section in view
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
+
   return (
     <>
       {/* Header */}
@@ -10,19 +31,25 @@ export default function Home() {
             Rytshark Port
           </h1>
           <ul className="flex gap-6">
-            {["Home", "About", "Projects", "Contact"].map((item) => (
-              <li key={item}>
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  className="text-white text-lg hover:text-red-600 transition"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
+            {["Home", "About", "Projects", "Contact"].map((item) => {
+              const id = item.toLowerCase();
+              const isActive = activeSection === id;
+              return (
+                <li key={item}>
+                  <a
+                    href={`#${id}`}
+                    className={`text-lg transition ${isActive ? 'text-red-500 font-semibold' : 'text-white hover:text-red-600'
+                      }`}
+                  >
+                    {item}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </header>
+
 
       {/* Home Section */}
       <section
