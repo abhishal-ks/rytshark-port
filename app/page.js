@@ -63,7 +63,7 @@ export default function Home() {
           <h3 className="text-2xl font-semibold mb-6 underline decoration-white/40">
             My Skill Cards
           </h3>
-          <div className="flex flex-wrap gap-9 w-full justify-center">
+          <div className="flex flex-wrap gap-5 md:gap-9 w-full justify-center">
             {[
               { src: 'HTML5.webp', name: 'HTML', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
               { src: 'CSS3.png', name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
