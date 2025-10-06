@@ -30,7 +30,7 @@ export default function Home() {
           <h1 className="text-lg md:text-2xl font-bold bg-gradient-to-b from-blue-600 to-indigo-700 text-transparent bg-clip-text drop-shadow">
             Rytshark Port
           </h1>
-          <ul className="flex gap-6">
+          <ul className="flex gap-3 md:gap-6">
             {["Home", "About", "Projects", "Contact"].map((item) => {
               const id = item.toLowerCase();
               const isActive = activeSection === id;
