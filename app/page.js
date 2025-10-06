@@ -63,25 +63,34 @@ export default function Home() {
           <h3 className="text-2xl font-semibold mb-6 underline decoration-white/40">
             My Skill Cards
           </h3>
-          <div className="flex flex-wrap gap-4 w-full justify-center">
+          <div className="flex flex-wrap gap-9 w-full justify-center">
             {[
-              { src: 'HTML5.webp', name: 'HTML' },
-              { src: 'CSS3.png', name: 'CSS' },
-              { src: 'JavaScript.png', name: 'JavaScript' },
-              { src: 'ExpressJS.png', name: 'Express' },
-              { src: 'MongoDB.png', name: 'MongoDB' },
-              { src: 'Tailwind CSS.png', name: 'Tailwind CSS' },
-              { src: 'React.webp', name: 'React' },
-              { src: 'nextjs.png', name: 'Next' },
-              { src: 'python.png', name: 'Python' },
-            ].map(({ src, name }) => (
-              <div
+              { src: 'HTML5.webp', name: 'HTML', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+              { src: 'CSS3.png', name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+              { src: 'JavaScript.png', name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+              { src: 'ExpressJS.png', name: 'Express', url: 'https://expressjs.com/' },
+              { src: 'MongoDB.png', name: 'MongoDB', url: 'https://www.mongodb.com/' },
+              { src: 'Tailwind CSS.png', name: 'Tailwind CSS', url: 'https://tailwindcss.com/' },
+              { src: 'React.webp', name: 'React', url: 'https://reactjs.org/' },
+              { src: 'nextjs.png', name: 'Next', url: 'https://nextjs.org/' },
+              { src: 'python.png', name: 'Python', url: 'https://www.python.org/' },
+            ].map(({ src, name, url }) => (
+              <a
                 key={name}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gray-100 text-black p-5 rounded-lg shadow-md flex flex-col items-center justify-center h-32 w-28 transition-transform hover:scale-105"
               >
-                <Image src={`/${src}`} alt={name} height={56} width={56} className="w-14 h-14 object-contain" />
-                <h3 className="mt-3 font-semibold">{name}</h3>
-              </div>
+                <Image
+                  src={`/${src}`}
+                  alt={name}
+                  height={56}
+                  width={56}
+                  className="w-14 h-14 object-contain"
+                />
+                <h3 className="mt-3 font-semibold text-center">{name}</h3>
+              </a>
             ))}
           </div>
         </div>
