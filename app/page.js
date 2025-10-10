@@ -62,7 +62,7 @@ export default function Home() {
             <br/>
             <strong>Abhishal KS</strong> here!
           </h1>
-          <p className="mb-2">Co-Founder of TipDoor.</p>
+          <p className="mb-2"><i>Into Tech and Building</i></p>
           <p className="mb-4">
             Working with Tech Startups as a passionate web developer.
           </p>
