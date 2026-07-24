@@ -224,9 +224,9 @@ export default function Home() {
                 icon: '📍',
               },
               {
-                label: 'CV',
-                value: 'View CV',
-                href: '/Abhishal-CV.pdf',
+                label: 'Resume',
+                value: 'View Resume',
+                href: '/Resume - Abhishal Kumar Sharma_compressed.pdf',
                 icon: '📄',
               },
             ].map(({ label, value, href, icon }) => (
