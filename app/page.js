@@ -59,7 +59,7 @@ export default function Home() {
         <div className="bg-black/80 bg-opacity-70 px-1 py-2.5 md:p-12 rounded-lg text-center md:max-w-xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">
             Hey👋,
-            <br/>
+            <br />
             <strong>Abhishal KS</strong> here!
           </h1>
           <p className="mb-2"><i>Into Tech and Building</i></p>
@@ -138,21 +138,21 @@ export default function Home() {
             {[
               {
                 src: 'project1.jpg',
-                title: 'Project 1',
-                desc: 'Aesthetics display website',
-                linkTo: 'https://aesthetics-meadows.vercel.app/'
+                title: 'SSJ',
+                desc: 'A Private Journal Web Application.',
+                linkTo: 'https://ssj-app.vercel.app/dashboard'
               },
               {
                 src: 'project2.jpg',
-                title: 'Project 2',
-                desc: 'Another project description.',
-                linkTo: ''
+                title: 'Aesthetics Meadows',
+                desc: 'Aesthetics display website.',
+                linkTo: 'https://aesthetics-meadows.vercel.app/'
               },
               {
                 src: 'project3.jpg',
-                title: 'Project 3',
-                desc: 'Short description of my third project.',
-                linkTo: ''
+                title: 'My Github',
+                desc: 'Visit profile',
+                linkTo: 'https://github.com/abhishal-ks'
               },
             ].map(({ src, title, desc, linkTo }) => (
               <div
