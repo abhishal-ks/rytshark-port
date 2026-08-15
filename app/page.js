@@ -226,7 +226,7 @@ export default function Home() {
               {
                 label: 'Resume',
                 value: 'View Resume',
-                href: '/Resume - Abhishal Kumar Sharma_compressed.pdf',
+                href: '/Resume - Abhishal K.S..pdf',
                 icon: '📄',
               },
             ].map(({ label, value, href, icon }) => (
