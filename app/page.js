@@ -350,7 +350,7 @@ export default function Home() {
         <div className="h-px bg-gray-500 w-[90vw] mx-auto mb-4"></div>
 
         <p className="text-sm">
-          &copy; 2025 Abhishal Kumar Sharma. All rights reserved.
+          &copy; {new Date().getFullYear()} Abhishal Kumar Sharma. All rights reserved.
         </p>
       </footer>
 
