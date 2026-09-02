@@ -3,3 +3,36 @@
 html {
   scroll-behavior: smooth;
 }
+
+::selection {
+  background: #14b8a6;
+  color: #042f2e;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f0b10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border: 3px solid #1f0b10;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f43f5e;
+}
+
+html {
+  scrollbar-color: #dc2626 #1f0b10;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+}
+
+body {
+  scrollbar-color: #dc2626 #1f0b10;
+}

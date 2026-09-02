@@ -27,21 +27,39 @@ export default function Home() {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-[rgba(51,51,51,0.5)] transition duration-300 backdrop-blur-sm">
         <nav className="flex justify-between items-center px-0.5 md:px-8 py-4 max-w-7xl mx-auto">
-          <h1 className="text-lg md:text-2xl font-bold bg-gradient-to-b from-blue-600 to-indigo-700 text-transparent bg-clip-text drop-shadow">
+          <h1 className="text-lg md:text-2xl font-bold bg-gradient-to-b from-rose-400 to-red-600 text-transparent bg-clip-text drop-shadow">
             Rytshark Port
           </h1>
-          <ul className="flex gap-3 md:gap-6">
-            {["Home", "About", "Projects", "Contact"].map((item) => {
-              const id = item.toLowerCase();
+          <ul className="flex gap-2.5 md:gap-6">
+            {[
+              { label: "Home", icon: "home" },
+              { label: "About", icon: "user" },
+              { label: "Projects", icon: "folder" },
+              { label: "Contact", icon: "mail" },
+            ].map(({ label, icon }) => {
+              const id = label.toLowerCase();
               const isActive = activeSection === id;
               return (
-                <li key={item}>
+                <li key={label}>
                   <a
                     href={`#${id}`}
-                    className={`text-lg transition ${isActive ? 'text-red-500 font-semibold' : 'text-white hover:text-red-600'
+                    className={`inline-flex flex-col items-center gap-1 text-xs md:text-sm leading-none transition ${isActive ? 'text-red-500 font-semibold' : 'text-white hover:text-red-600'
                       }`}
                   >
-                    {item}
+                    <svg
+                      aria-hidden="true"
+                      className="block h-4 w-4 shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                    >
+                      {icon === "home" && <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 9.75-9 9.75 9M4.5 10.5v10.125h15V10.5M9 20.625v-6h6v6" />}
+                      {icon === "user" && <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6.75a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM3.75 20.25a8.25 8.25 0 0 1 16.5 0" />}
+                      {icon === "folder" && <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h5.25l1.5 2.25h9.75v8.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6.75Z" />}
+                      {icon === "mail" && <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5v13.5H3.75V5.25Zm0 1.5 8.25 6 8.25-6" />}
+                    </svg>
+                    {label}
                   </a>
                 </li>
               );
@@ -77,7 +95,7 @@ export default function Home() {
             Humanities was a path I excelled in. Software development was the path I chose.
             Today, I bring that same curiosity and problem-solving mindset to building clean, scalable digital experiences.
           </p> */}
-          
+
           <h1 className="text-4xl md:text-5xl font-black leading-tight mb-4">
             Hey 👋,
             <br />
