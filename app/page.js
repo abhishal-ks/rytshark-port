@@ -26,11 +26,11 @@ export default function Home() {
     <>
       {/* Header */}
       <header className="sticky top-0 z-50 bg-[rgba(51,51,51,0.5)] transition duration-300 backdrop-blur-sm">
-        <nav className="flex justify-between items-center px-0.5 md:px-8 py-4 max-w-7xl mx-auto">
+        <nav className="flex justify-between items-center px-4 md:px-8 py-4 max-w-7xl mx-auto">
           <h1 className="text-lg md:text-2xl font-bold bg-gradient-to-b from-rose-400 to-red-600 text-transparent bg-clip-text drop-shadow">
-            Rytshark Port
+            RytShark Port
           </h1>
-          <ul className="flex gap-2.5 md:gap-6">
+          <ul className="flex gap-3 md:gap-6">
             {[
               { label: "Home", icon: "home" },
               { label: "About", icon: "user" },
