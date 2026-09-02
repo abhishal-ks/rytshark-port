@@ -54,33 +54,75 @@ export default function Home() {
       {/* Home Section */}
       <section
         id="home"
-        className="h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg.jpg')]"
+        className="scroll-mt-28 h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg.jpg')]"
       >
-        <div className="bg-black/80 bg-opacity-70 px-1 py-2.5 md:p-12 rounded-lg text-center md:max-w-xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4">
+        <div className="mx-4 md:mx-8 bg-black/80 bg-opacity-70 px-4 py-6 md:px-10 md:py-10 rounded-2xl text-center md:max-w-xl shadow-2xl border border-white/10 backdrop-blur-sm">
+          <span className="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-500/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-red-200 mb-5">
+            Available for projects
+          </span>
+          {/* <h1 className="text-4xl md:text-5xl font-black leading-tight mb-4">
             Hey👋,
             <br />
-            <strong>Abhishal KS</strong> here!
+            <span className="bg-gradient-to-r from-red-400 via-pink-300 to-orange-200 bg-clip-text text-transparent">
+              Abhishal KS
+            </span>
+            <span className="block text-2xl md:text-3xl font-semibold mt-2 text-white/90">
+              Web Developer | Next.js in my arsenal
+            </span>
           </h1>
-          <p className="mb-2"><i>Into Tech and Building</i></p>
-          <p className="mb-4">
-            Working with Tech Startups as a passionate web developer.
+          <p className="mb-3 text-base md:text-lg italic text-gray-200">
+            Into Tech and Building
           </p>
-          <a
-            href="#about"
-            className="inline-block mt-4 px-6 py-2 bg-red-600 hover:bg-red-800 text-white rounded transition"
-          >
-            Learn More
-          </a>
+          <p className="mb-6 text-sm md:text-base text-gray-200/95">
+            Humanities was a path I excelled in. Software development was the path I chose.
+            Today, I bring that same curiosity and problem-solving mindset to building clean, scalable digital experiences.
+          </p> */}
+          
+          <h1 className="text-4xl md:text-5xl font-black leading-tight mb-4">
+            Hey 👋,
+            <br />
+            <span className="bg-gradient-to-r from-red-400 via-pink-300 to-orange-200 bg-clip-text text-transparent">
+              Abhishal KS
+            </span>
+            <span className="block text-2xl md:text-3xl font-semibold mt-2 text-white/90">
+              Full-Stack Developer ⚔️ Next.js in my arsenal.
+            </span>
+          </h1>
+
+          <p className="mb-3 text-base md:text-lg italic text-gray-200">
+            Building ideas into meaningful digital experiences.
+          </p>
+
+          <p className="mb-0.5 text-sm md:text-base text-gray-200/95">
+            Humanities was a path I excelled in. Software development was the path I chose.
+          </p>
+          <p className="mb-6 text-sm md:text-base text-gray-200/95">
+            Today, I bring that same curiosity and problem-solving mindset to building clean, scalable digital experiences.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="#about"
+              className="inline-block w-full sm:w-auto px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full transition shadow-lg shadow-red-900/30"
+            >
+              Learn More
+            </a>
+            <a
+              href="#projects"
+              className="inline-block w-full sm:w-auto px-6 py-3 border border-white/20 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-full transition"
+            >
+              View Projects
+            </a>
+          </div>
         </div>
       </section>
 
       {/* About Section */}
       <section
         id="about"
-        className="min-h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg2.jpg')]"
+        className="scroll-mt-28 min-h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg2.jpg')] py-16"
       >
-        <div className="flex flex-col items-center text-center max-w-5xl px-0.5 md:px-4">
+        <div className="mx-4 md:mx-8 flex flex-col items-center text-center max-w-5xl px-4 md:px-8">
           <h2 className="bg-black/80 bg-opacity-70 p-8 rounded-lg mb-8 text-3xl font-bold w-full">
             About Me
           </h2>
@@ -128,9 +170,9 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg3.jpg')]"
+        className="scroll-mt-28 h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg3.jpg')] py-16"
       >
-        <div className="text-center max-w-5xl px-4">
+        <div className="mx-4 md:mx-8 text-center max-w-5xl px-4 md:px-8">
           <h2 className="bg-black/80 bg-opacity-70 p-8 rounded-lg text-3xl font-bold mb-8">
             My Projects
           </h2>
@@ -183,9 +225,9 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="min-h-screen bg-[url('/hero-bg4.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center px-4 py-16"
+        className="scroll-mt-28 min-h-screen bg-[url('/hero-bg4.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center px-4 py-16 md:py-20"
       >
-        <div className="w-full max-w-6xl bg-black/70 backdrop-blur-md rounded-xl p-10 shadow-lg text-white">
+        <div className="w-full max-w-6xl mx-4 md:mx-8 bg-black/70 backdrop-blur-md rounded-xl p-8 md:p-10 shadow-lg text-white">
           <h2 className="text-4xl font-bold text-center mb-10">Let&apos;s Connect</h2>
           <p className="text-lg mb-8 text-center">
             Have a project in mind, or just want to say hello? Reach out via your favorite platform!
