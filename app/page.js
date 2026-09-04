@@ -197,21 +197,21 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-6">
             {[
               {
-                src: 'project1.jpg',
+                src: 'ssj.png',
                 title: 'SSJ',
                 desc: 'A Private Journal Web Application.',
                 linkTo: 'https://ssj-app.vercel.app/dashboard'
               },
               {
-                src: 'project2.jpg',
+                src: 'aesthetics-meadows.png',
                 title: 'Aesthetics Meadows',
                 desc: 'Aesthetics display website.',
                 linkTo: 'https://aesthetics-meadows.vercel.app/'
               },
               {
-                src: 'project3.jpg',
-                title: 'My Github',
-                desc: 'Visit profile',
+                src: 'github-profile.png',
+                title: 'GitHub',
+                desc: 'Explore my open-source work and projects.',
                 linkTo: 'https://github.com/abhishal-ks'
               },
             ].map(({ src, title, desc, linkTo }) => (
@@ -219,12 +219,14 @@ export default function Home() {
                 key={title}
                 className="bg-gray-100 text-black p-6 rounded-lg w-[300px] text-left shadow-md"
               >
-                <Image
-                  src={`/${src}`}
-                  alt={title}
-                  fill
-                  className="w-full rounded-lg mb-3"
-                />
+                <div className="relative h-40 w-full overflow-hidden rounded-lg mb-3">
+                  <Image
+                    src={`/${src}`}
+                    alt={title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <h3 className="text-lg font-bold">{title}</h3>
                 <p className="text-sm">{desc}</p>
                 <a
