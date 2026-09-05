@@ -188,7 +188,7 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="scroll-mt-28 h-screen bg-cover bg-center bg-fixed flex justify-center items-center text-white bg-[url('/hero-bg3.jpg')] py-16"
+        className="scroll-mt-28 min-h-screen h-auto bg-cover bg-center bg-scroll md:bg-fixed flex justify-center items-start md:items-center text-white bg-[url('/hero-bg3.jpg')] py-16"
       >
         <div className="mx-4 md:mx-8 text-center max-w-5xl px-4 md:px-8">
           <h2 className="bg-black/80 bg-opacity-70 p-8 rounded-lg text-3xl font-bold mb-8">
