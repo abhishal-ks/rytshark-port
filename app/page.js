@@ -144,7 +144,66 @@ export default function Home() {
           <h2 className="bg-black/80 bg-opacity-70 p-8 rounded-lg mb-8 text-3xl font-bold w-full">
             About Me
           </h2>
-          <p className="mb-8 max-w-2xl leading-relaxed">
+          <div className="mx-auto mb-8 max-w-xl">
+            <p className="mb-3 text-[0.72rem] font-bold uppercase tracking-[0.24em] text-rose-300">The stack behind the work</p>
+            <p className="text-[1.05rem] leading-[1.7] text-white/80">
+              I build modern, fast interfaces with Next.js at the center, supported by a practical React and TypeScript workflow.
+            </p>
+          </div>
+
+          <div
+            className="grid w-full gap-3.5 text-left md:grid-cols-[minmax(13rem,0.78fr)_minmax(0,1.7fr)]"
+            aria-label="Technology skills"
+          >
+            <a
+              href="https://nextjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative flex min-h-80 flex-col overflow-hidden rounded-2xl border border-white/15 bg-[linear-gradient(145deg,rgba(190,24,93,0.82),rgba(30,10,20,0.92))] p-[1.4rem] transition duration-200 after:absolute after:right-[-5rem] after:top-16 after:h-64 after:w-64 after:rounded-full after:border after:border-rose-200/25 after:content-[''] hover:-translate-y-0.5 hover:border-rose-600/70 md:row-span-2 md:min-h-96"
+            >
+              <span className="text-[0.67rem] uppercase tracking-[0.15em] text-white/55">01 / core</span>
+              <Image src="/nextjs.png" alt="Next.js" height={104} width={104} className="my-auto mb-5 h-[6.5rem] w-[6.5rem] object-contain object-left" />
+              <span className="text-[2rem] font-extrabold tracking-[-0.03em]">Next.js</span>
+              <span className="mt-2 max-w-60 text-[0.85rem] leading-[1.55] text-white/70">My primary framework for thoughtful, production-ready web experiences.</span>
+              <span className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-white/30 text-[1.15rem]" aria-hidden="true">↗</span>
+            </a>
+
+            <div className="grid grid-cols-2 gap-3.5 md:grid-cols-4">
+              {[
+                { src: 'React.webp', name: 'React', note: 'UI foundation', url: 'https://react.dev/' },
+                { src: 'Typescript.webp', name: 'TypeScript', note: 'Typed workflows', url: 'https://www.typescriptlang.org/' },
+                { src: 'JavaScript.png', name: 'JavaScript', note: 'Interaction layer', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+                { src: 'Tailwind CSS.png', name: 'Tailwind CSS', note: 'Visual system', url: 'https://tailwindcss.com/' },
+                { src: 'HTML5.webp', name: 'HTML', note: 'Semantic structure', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+                { src: 'CSS3.png', name: 'CSS', note: 'Polished details', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+                { src: 'ExpressJS.png', name: 'Express', note: 'Backend routes', url: 'https://expressjs.com/' },
+                { src: 'MongoDB.png', name: 'MongoDB', note: 'Data layer', url: 'https://www.mongodb.com/' },
+              ].map(({ src, name, note, url }, index) => (
+                <a key={name} href={url} target="_blank" rel="noopener noreferrer" className="relative flex min-h-44 flex-col rounded-xl border border-white/15 bg-black/75 p-3.5 transition duration-200 hover:-translate-y-0.5 hover:border-rose-600/70">
+                  <span className="mb-auto text-[0.58rem] uppercase tracking-[0.15em] text-white/55">0{index + 2}</span>
+                  <Image src={`/${src}`} alt={name} height={44} width={44} className="mb-3 h-11 w-11 object-contain object-left" />
+                  <span className="text-[0.92rem] font-bold text-white">{name}</span>
+                  <span className="mt-1 text-[0.68rem] text-white/50">{note}</span>
+                </a>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 md:col-start-2">
+              <span className="text-[0.67rem] uppercase tracking-[0.15em] text-white/55">Also explored</span>
+              {[
+                { src: 'python.png', name: 'Python', url: 'https://www.python.org/' },
+                { src: 'c-lang.png', name: 'C', url: 'https://en.cppreference.com/w/c' },
+              ].map(({ src, name, url }) => (
+                <a key={name} href={url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-3 py-2 transition duration-200 hover:-translate-y-0.5 hover:border-rose-600/70">
+                  <Image src={`/${src}`} alt={name} height={28} width={28} />
+                  <span className="text-[0.78rem] font-semibold text-white/80">{name}</span>
+                  <span className="text-rose-300" aria-hidden="true">↗</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* <p className="mb-8 max-w-2xl leading-relaxed">
             Hi, I&apos;m <strong>Abhishal Kumar Sharma</strong>, a full-stack web developer based in Delhi,
             with a focus on front-end development. I specialize in building dynamic and user-friendly web
             applications using modern technologies.
@@ -157,12 +216,14 @@ export default function Home() {
               { src: 'HTML5.webp', name: 'HTML', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
               { src: 'CSS3.png', name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
               { src: 'JavaScript.png', name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+              { src: 'TypeScript.webp', name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
               { src: 'ExpressJS.png', name: 'Express', url: 'https://expressjs.com/' },
               { src: 'MongoDB.png', name: 'MongoDB', url: 'https://www.mongodb.com/' },
               { src: 'Tailwind CSS.png', name: 'Tailwind CSS', url: 'https://tailwindcss.com/' },
               { src: 'React.webp', name: 'React', url: 'https://reactjs.org/' },
               { src: 'nextjs.png', name: 'Next', url: 'https://nextjs.org/' },
               { src: 'python.png', name: 'Python', url: 'https://www.python.org/' },
+              { src: 'c-lang.png', name: 'C', url: 'https://www.c-language.org/' },
             ].map(({ src, name, url }) => (
               <a
                 key={name}
@@ -181,7 +242,7 @@ export default function Home() {
                 <h3 className="mt-3 font-semibold text-center">{name}</h3>
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
