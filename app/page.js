@@ -278,7 +278,7 @@ export default function Home() {
             ].map(({ src, title, desc, linkTo }) => (
               <div
                 key={title}
-                className="bg-gray-100 text-black p-6 rounded-lg w-[300px] text-left shadow-md"
+                className="bg-gray-100 text-black p-6 rounded-lg w-[300px] text-left shadow-md transition duration-200 hover:-translate-y-2 hover:border-2 hover:border-red-600/70 hover:shadow-[0_0_20px_rgba(225,29,72,0.6)]"
               >
                 <div className="relative h-40 w-full overflow-hidden rounded-lg mb-3">
                   <Image
