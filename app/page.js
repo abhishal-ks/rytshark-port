@@ -360,10 +360,10 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 bg-white/10 hover:bg-white/20 p-5 rounded-lg transition"
               >
-                <span className="text-3xl">{icon}</span>
-                <div>
+                <span className="shrink-0 text-3xl">{icon}</span>
+                <div className="min-w-0">
                   <p className="text-sm text-gray-300">{label}</p>
-                  <p className="font-semibold">{value}</p>
+                  <p className="font-semibold [overflow-wrap:anywhere]">{value}</p>
                 </div>
               </a>
             ))}
